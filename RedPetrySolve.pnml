@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<pnml xmlns="http://www.pnml.org/version-2009/grammar/pnml">
+  <net id="Untitled" type="http://www.pnml.org/version-2009/grammar/ptnet">
+    <name>
+      <text>Untitled</text>
+    </name>
+    <page id="page0">
+      <name>
+        <text>`</text>
+      </name>
+      <place id="id1">
+        <name>
+          <text>VerificarDisponibilidadBodega</text>
+        </name>
+        <graphics>
+          <position x="352" y="118" />
+        </graphics>
+      </place>
+      <place id="id3">
+        <name>
+          <text>EnViarLibroPorCorreo</text>
+        </name>
+        <graphics>
+          <position x="209" y="293" />
+        </graphics>
+      </place>
+      <place id="id5">
+        <name>
+          <text>CotizarProveedor1</text>
+        </name>
+        <graphics>
+          <position x="435" y="300" />
+        </graphics>
+      </place>
+      <place id="id6">
+        <name>
+          <text>CotizarProveedor3</text>
+        </name>
+        <graphics>
+          <position x="665" y="303" />
+        </graphics>
+      </place>
+      <place id="id7">
+        <name>
+          <text>CotizarProveedor2</text>
+        </name>
+        <graphics>
+          <position x="542" y="291" />
+        </graphics>
+      </place>
+      <place id="id20">
+        <name>
+          <text>SeleccionarMenorPrecio</text>
+        </name>
+        <graphics>
+          <position x="543" y="463" />
+        </graphics>
+      </place>
+      <place id="id24">
+        <name>
+          <text>LibroNoDisponible</text>
+        </name>
+        <graphics>
+          <position x="665" y="437" />
+        </graphics>
+      </place>
+      <place id="id25">
+        <name>
+          <text>NotificarClLienteLibroNoDisponible</text>
+        </name>
+        <graphics>
+          <position x="817" y="309" />
+        </graphics>
+      </place>
+      <transition id="id0">
+        <name>
+          <text>SolicitudLibroCliente</text>
+        </name>
+        <graphics>
+          <position x="360" y="38" />
+        </graphics>
+      </transition>
+      <transition id="id2">
+        <name>
+          <text>LibroDisponible</text>
+        </name>
+        <graphics>
+          <position x="216" y="200" />
+        </graphics>
+      </transition>
+      <transition id="id13">
+        <name>
+          <text>LibroDisponibleEnMinimo1Proveedor</text>
+        </name>
+        <graphics>
+          <position x="546" y="368" />
+        </graphics>
+      </transition>
+      <transition id="id10">
+        <name>
+          <text>LibroNoDisponible</text>
+        </name>
+        <graphics>
+          <position x="456" y="196" />
+        </graphics>
+      </transition>
+      <transition id="id27">
+        <name>
+          <text>ReclamoCliente</text>
+        </name>
+        <graphics>
+          <position x="805" y="449" />
+        </graphics>
+      </transition>
+      <transition id="id28">
+        <name>
+          <text>Pasaron3Dias</text>
+        </name>
+        <graphics>
+          <position x="602" y="129" />
+        </graphics>
+      </transition>
+      <transition id="id22">
+        <name>
+          <text>RecibirLibroBodega</text>
+        </name>
+        <graphics>
+          <position x="197" y="456" />
+        </graphics>
+      </transition>
+      <arc id="id16" source="id10" target="id5">
+        <graphics>
+          <position x="435" y="206" />
+          <position x="442" y="261" />
+        </graphics>
+      </arc>
+      <arc id="id15" source="id1" target="id10">
+        <graphics>
+          <position x="392" y="148" />
+          <position x="406" y="186" />
+        </graphics>
+      </arc>
+      <arc id="id9" source="id2" target="id3">
+        <graphics>
+          <position x="209" y="210" />
+          <position x="212" y="254" />
+        </graphics>
+      </arc>
+      <arc id="id8" source="id1" target="id2">
+        <graphics>
+          <position x="310" y="143" />
+          <position x="266" y="190" />
+        </graphics>
+      </arc>
+      <arc id="id4" source="id0" target="id1">
+        <graphics>
+          <position x="352" y="48" />
+          <position x="356" y="69" />
+        </graphics>
+      </arc>
+      <arc id="id11" source="id5" target="id13">
+        <graphics>
+          <position x="469" y="320" />
+          <position x="496" y="348" />
+        </graphics>
+      </arc>
+      <arc id="id12" source="id7" target="id13">
+        <graphics>
+          <position x="544" y="330" />
+          <position x="542" y="348" />
+        </graphics>
+      </arc>
+      <arc id="id14" source="id6" target="id13">
+        <graphics>
+          <position x="630" y="322" />
+          <position x="596" y="348" />
+        </graphics>
+      </arc>
+      <arc id="id17" source="id10" target="id7">
+        <graphics>
+          <position x="506" y="206" />
+          <position x="516" y="262" />
+        </graphics>
+      </arc>
+      <arc id="id18" source="id10" target="id6">
+        <graphics>
+          <position x="506" y="206" />
+          <position x="630" y="285" />
+        </graphics>
+      </arc>
+      <arc id="id21" source="id13" target="id20">
+        <graphics>
+          <position x="543" y="388" />
+          <position x="544" y="424" />
+        </graphics>
+      </arc>
+      <arc id="id33" source="id20" target="id22">
+        <graphics>
+          <position x="504" y="463" />
+          <position x="232" y="463" />
+        </graphics>
+      </arc>
+      <arc id="id26" source="id13" target="id24">
+        <graphics>
+          <position x="596" y="388" />
+          <position x="631" y="417" />
+        </graphics>
+      </arc>
+      <arc id="id29" source="id24" target="id27">
+        <graphics>
+          <position x="704" y="440" />
+          <position x="755" y="439" />
+        </graphics>
+      </arc>
+      <arc id="id30" source="id27" target="id25">
+        <graphics>
+          <position x="817" y="439" />
+          <position x="814" y="348" />
+        </graphics>
+      </arc>
+      <arc id="id31" source="id1" target="id28">
+        <graphics>
+          <position x="401" y="120" />
+          <position x="552" y="119" />
+        </graphics>
+      </arc>
+      <arc id="id32" source="id28" target="id25">
+        <graphics>
+          <position x="652" y="139" />
+          <position x="787" y="284" />
+        </graphics>
+      </arc>
+      <arc id="id34" source="id22" target="id3">
+        <graphics>
+          <position x="209" y="436" />
+          <position x="207" y="332" />
+        </graphics>
+      </arc>
+    </page>
+  </net>
+</pnml>
